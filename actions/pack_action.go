@@ -27,7 +27,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/go-debos/debos"
+	"github.com/gmccollister/debos"
 )
 
 var tarOpts = map[string]string{

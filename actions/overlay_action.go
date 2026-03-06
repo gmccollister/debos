@@ -30,7 +30,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/go-debos/debos"
+	"github.com/gmccollister/debos"
 )
 
 type OverlayAction struct {

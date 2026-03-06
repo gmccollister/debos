@@ -1,4 +1,4 @@
-module github.com/go-debos/debos
+module github.com/gmccollister/debos
 
 go 1.24
 

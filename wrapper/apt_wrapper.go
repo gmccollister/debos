@@ -2,7 +2,7 @@
 package wrapper
 
 import (
-	"github.com/go-debos/debos"
+	"github.com/gmccollister/debos"
 )
 
 type AptCommand struct {

@@ -10,8 +10,8 @@ import (
 	"strings"
 
 	"github.com/docker/go-units"
-	"github.com/go-debos/debos"
-	"github.com/go-debos/debos/actions"
+	"github.com/gmccollister/debos"
+	"github.com/gmccollister/debos/actions"
 	"github.com/go-debos/fakemachine"
 	"github.com/jessevdk/go-flags"
 )

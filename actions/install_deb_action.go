@@ -75,8 +75,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/go-debos/debos"
-	"github.com/go-debos/debos/wrapper"
+	"github.com/gmccollister/debos"
+	"github.com/gmccollister/debos/wrapper"
 )
 
 type InstallDebAction struct {

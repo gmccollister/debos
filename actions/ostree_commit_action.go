@@ -45,7 +45,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/go-debos/debos"
+	"github.com/gmccollister/debos"
 	"github.com/sjoerdsimons/ostree-go/pkg/otbuiltin"
 )
 

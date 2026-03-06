@@ -34,7 +34,7 @@ package actions
 
 import (
 	"fmt"
-	"github.com/go-debos/debos"
+	"github.com/gmccollister/debos"
 )
 
 type UnpackAction struct {

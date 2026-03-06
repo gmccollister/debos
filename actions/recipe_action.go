@@ -30,7 +30,7 @@ package actions
 import (
 	"errors"
 	"fmt"
-	"github.com/go-debos/debos"
+	"github.com/gmccollister/debos"
 	"github.com/go-debos/fakemachine"
 	"log"
 	"os"

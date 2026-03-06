@@ -198,7 +198,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/go-debos/debos"
+	"github.com/gmccollister/debos"
 )
 
 type Partition struct {

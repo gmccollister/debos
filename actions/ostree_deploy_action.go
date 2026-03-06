@@ -57,7 +57,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/go-debos/debos"
+	"github.com/gmccollister/debos"
 	ostree "github.com/sjoerdsimons/ostree-go/pkg/otbuiltin"
 )
 

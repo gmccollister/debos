@@ -50,41 +50,41 @@ other value than '512' is not supported by the 'uml' fakemachine backend.
 
 # Supported actions
 
-- apt -- https://godoc.org/github.com/go-debos/debos/actions#hdr-Apt_Action
+- apt -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-Apt_Action
 
-- debootstrap -- https://godoc.org/github.com/go-debos/debos/actions#hdr-Debootstrap_Action
+- debootstrap -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-Debootstrap_Action
 
-- mmdebstrap -- https://godoc.org/github.com/go-debos/debos/actions#hdr-Mmdebstrap_Action
+- mmdebstrap -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-Mmdebstrap_Action
 
-- download -- https://godoc.org/github.com/go-debos/debos/actions#hdr-Download_Action
+- download -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-Download_Action
 
-- filesystem-deploy -- https://godoc.org/github.com/go-debos/debos/actions#hdr-FilesystemDeploy_Action
+- filesystem-deploy -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-FilesystemDeploy_Action
 
-- image -- https://godoc.org/github.com/go-debos/debos/actions#hdr-Image_Action
+- image -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-Image_Action
 
-- image-partition -- https://godoc.org/github.com/go-debos/debos/actions#hdr-ImagePartition_Action
+- image-partition -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-ImagePartition_Action
 
-- install-deb -- https://godoc.org/github.com/go-debos/debos/actions#hdr-InstallDeb_Action
+- install-deb -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-InstallDeb_Action
 
-- ostree-commit -- https://godoc.org/github.com/go-debos/debos/actions#hdr-OstreeCommit_Action
+- ostree-commit -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-OstreeCommit_Action
 
-- ostree-deploy -- https://godoc.org/github.com/go-debos/debos/actions#hdr-OstreeDeploy_Action
+- ostree-deploy -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-OstreeDeploy_Action
 
-- overlay -- https://godoc.org/github.com/go-debos/debos/actions#hdr-Overlay_Action
+- overlay -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-Overlay_Action
 
-- pack -- https://godoc.org/github.com/go-debos/debos/actions#hdr-Pack_Action
+- pack -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-Pack_Action
 
-- pacman -- https://godoc.org/github.com/go-debos/debos/actions#hdr-Pacman_Action
+- pacman -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-Pacman_Action
 
-- pacstrap -- https://godoc.org/github.com/go-debos/debos/actions#hdr-Pacstrap_Action
+- pacstrap -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-Pacstrap_Action
 
-- raw -- https://godoc.org/github.com/go-debos/debos/actions#hdr-Raw_Action
+- raw -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-Raw_Action
 
-- recipe -- https://godoc.org/github.com/go-debos/debos/actions#hdr-Recipe_Action
+- recipe -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-Recipe_Action
 
-- run -- https://godoc.org/github.com/go-debos/debos/actions#hdr-Run_Action
+- run -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-Run_Action
 
-- unpack -- https://godoc.org/github.com/go-debos/debos/actions#hdr-Unpack_Action
+- unpack -- https://godoc.org/github.com/gmccollister/debos/actions#hdr-Unpack_Action
 */
 package actions
 
@@ -92,7 +92,7 @@ import (
 	"al.essio.dev/pkg/shellescape"
 	"bytes"
 	"fmt"
-	"github.com/go-debos/debos"
+	"github.com/gmccollister/debos"
 	"github.com/go-task/slim-sprig/v3"
 	"github.com/goccy/go-yaml"
 	"github.com/google/uuid"

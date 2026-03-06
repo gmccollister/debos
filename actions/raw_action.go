@@ -40,7 +40,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/go-debos/debos"
+	"github.com/gmccollister/debos"
 )
 
 type RawAction struct {

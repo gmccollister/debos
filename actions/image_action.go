@@ -61,7 +61,7 @@ import (
 
 	"github.com/docker/go-units"
 	"github.com/freddierice/go-losetup/v2"
-	"github.com/go-debos/debos"
+	"github.com/gmccollister/debos"
 	"github.com/go-debos/fakemachine"
 	"github.com/google/uuid"
 )
