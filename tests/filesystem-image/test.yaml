@@ -1,0 +1,15 @@
+architecture: amd64
+
+actions:
+  - action: debootstrap
+    suite: trixie
+    components: [main]
+    mirror: https://deb.debian.org/debian
+    variant: minbase
+
+  - action: image
+    imagename: test.img
+    imagesize: 1GB
+    fs: ext4
+
+  - action: filesystem-deploy

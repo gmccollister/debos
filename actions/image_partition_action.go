@@ -366,10 +366,9 @@ func (i ImagePartitionAction) PreMachine(context *debos.Context, m *fakemachine.
 	return nil
 }
 
-func (i ImagePartitionAction) formatPartition(p *Partition, context debos.Context) error {
-	label := fmt.Sprintf("Formatting partition %d", p.number)
-	path := i.getPartitionDevice(p.number, context)
-
+// formatFilesystem formats devicePath with the filesystem described by p.
+// It updates p.FSUUID if it was empty and the fs is not "none".
+func formatFilesystem(label, devicePath string, p *Partition) error {
 	cmdline := []string{}
 	switch p.FS {
 	case "fat", "fat12", "fat16", "fat32", "msdos", "vfat":
@@ -434,7 +433,7 @@ func (i ImagePartitionAction) formatPartition(p *Partition, context debos.Contex
 	}
 
 	if len(cmdline) != 0 {
-		cmdline = append(cmdline, path)
+		cmdline = append(cmdline, devicePath)
 
 		cmd := debos.Command{}
 
@@ -456,7 +455,7 @@ func (i ImagePartitionAction) formatPartition(p *Partition, context debos.Contex
 	}
 
 	if p.FS != "none" && p.FSUUID == "" {
-		uuid, err := exec.Command("blkid", "-o", "value", "-s", "UUID", "-p", "-c", "none", path).Output()
+		uuid, err := exec.Command("blkid", "-o", "value", "-s", "UUID", "-p", "-c", "none", devicePath).Output()
 		if err != nil {
 			return fmt.Errorf("failed to get uuid: %w", err)
 		}
@@ -464,6 +463,11 @@ func (i ImagePartitionAction) formatPartition(p *Partition, context debos.Contex
 	}
 
 	return nil
+}
+
+func (i ImagePartitionAction) formatPartition(p *Partition, context debos.Context) error {
+	devicePath := i.getPartitionDevice(p.number, context)
+	return formatFilesystem(fmt.Sprintf("Formatting partition %d", p.number), devicePath, p)
 }
 
 func (i *ImagePartitionAction) PreNoMachine(context *debos.Context) error {
